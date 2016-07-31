@@ -1,0 +1,18 @@
+Jaxwsri is reference implementation ie only interfaces.
+Jaxwsri is available from jdk 1.5 but not included, ie available as separate jars
+Jaxwsri became part of jdk from 1.6 ie you can see also ws related tools wsgen,wsimport tools in bin
+As Jaxwsri is reference implementation, ie interfaces the implementations need to be included separately.
+Implementation jar is avaliable separately, which needs to be downloaded.
+You need to include them in WEB-INF\lib folder. 
+In eclipse, create dynamic web project, add jaxwsri lib in WEB-INF\lib folder
+Create the SEI and SIB classes
+Change the web.xml, to give skeleton url. Skeleton will be the java servlet.
+Configure  web service enpoint url in sun-jaxws.xml(which is the webservice config file for jaxws-ri based webservice)
+Run the SIB class to deploy the webservice.
+Get the wsdl from endpointurl?wsdl
+For Client:
+create again a dynamic web project
+generate the stub using wsimport giving the wsdl url
+copy stub to project, src folder.
+create the client class.
+run as application and get the output printed.
